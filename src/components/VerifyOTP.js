@@ -11,8 +11,7 @@ const VerifyOTP = () => {
 
     const handleVerify = (e) => {
         e.preventDefault();
-        // Simulated OTP verification logic
-        const simulatedOtp = "12345678"; // Simulated OTP sent to the user
+        const simulatedOtp = "12345678";
         if (otp === simulatedOtp) {
             setVerificationStatus("success");
         } else {

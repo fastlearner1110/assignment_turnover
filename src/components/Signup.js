@@ -18,7 +18,6 @@ const Signup = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            // Dummy API request to create an account
             const response = await fetch(
                 "https://jsonplaceholder.typicode.com/posts",
                 {
@@ -32,11 +31,9 @@ const Signup = () => {
             if (!response.ok) {
                 throw new Error("Failed to create account");
             }
-            // Account created successfully, you can redirect to another page or show a success message
             console.log("Account created successfully");
         } catch (error) {
             console.error("Error:", error);
-            // Handle error, show error message or alert to the user
         }
     };
 
@@ -126,7 +123,7 @@ const Signup = () => {
                             padding: "18px 148px",
                             gap: "10px",
                             borderRadius: "6px 0px 0px 0px",
-                            border: "1px solid #000", // Adjust border style as needed
+                            border: "1px solid #000",
                         }}
                         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                         type="submit"
